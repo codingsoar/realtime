@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "362131546752",
+    "project_id": "realtime-study-2026",
+    "storage_bucket": "realtime-study-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362131546752:android:0f0d7afd9051b37664bc65",
+        "android_client_info": {
+          "package_name": "com.realtime.realtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362131546752-g42i1qq4gtktoaq5et0o6mlbb04v0nvd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.realtime.realtime",
+            "certificate_hash": "068d849fdd7e4e856ef5d416d870c30cb74e28d7"
+          }
+        },
+        {
+          "client_id": "362131546752-7bsv0svtbm73s5dkg6mbkp463stfh5gn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdWpTc2pXAElDVtntrSii1aajTKGjjaWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362131546752-7bsv0svtbm73s5dkg6mbkp463stfh5gn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
