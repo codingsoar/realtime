@@ -1,0 +1,57 @@
+﻿Running Gradle task 'assembleRelease'...                        
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 1892 bytes (99.9% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+flutter : 
+위치 줄:1 문자:1
++ flutter build apk > build_log.txt
+ 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo          : NotSp
+    ecified: (:String) [], RemoteEx
+    ception
+    + FullyQualifiedErrorId : Nativ
+    eCommandError
+ 
+FAILURE: Build failed with an excep
+tion.
+
+* What went wrong:
+Execution failed for task ':app:che
+ckReleaseAarMetadata'.
+> Could not resolve all files for c
+onfiguration ':app:releaseRuntimeCl
+asspath'.
+   > Could not find com.arthenica:f
+fmpeg-kit-https:6.0-2.
+     Searched in the following loca
+tions:
+       - https://dl.google.com/dl/a
+ndroid/maven2/com/arthenica/ffmpeg-
+kit-https/6.0-2/ffmpeg-kit-https-6.
+0-2.pom
+       - https://repo.maven.apache.
+org/maven2/com/arthenica/ffmpeg-kit
+-https/6.0-2/ffmpeg-kit-https-6.0-2
+.pom
+       - https://storage.googleapis
+.com/download.flutter.io/com/arthen
+ica/ffmpeg-kit-https/6.0-2/ffmpeg-k
+it-https-6.0-2.pom
+     Required by:
+         project :app > project :ff
+mpeg_kit_flutter
+
+* Try:
+> Run with --stacktrace option to g
+et the stack trace.
+> Run with --info or --debug option
+ to get more log output.
+> Run with --scan to get full insig
+hts.
+> Get more help at https://help.gra
+dle.org.
+
+BUILD FAILED in 25s
+Running Gradle task 'assembleRelease'...                           25.8s
+Gradle task assembleRelease failed 
+with exit code 1

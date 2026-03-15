@@ -1,6 +1,6 @@
-import 'package:shared_preferences/shared_preferences.dart';
+﻿import 'package:shared_preferences/shared_preferences.dart';
 
-/// 공부 세션 데이터를 저장/복구하는 서비스
+/// Persists study session state and elapsed time.
 class StudySessionService {
   static const String _keyStudySeconds = 'study_seconds';
   static const String _keySessionActive = 'session_active';
@@ -20,26 +20,26 @@ class StudySessionService {
     _prefs ??= await SharedPreferences.getInstance();
   }
 
-  /// 누적 공부 시간(초)
+  /// Returns accumulated study seconds.
   Future<int> getStudySeconds() async {
     await init();
     return _prefs?.getInt(_keyStudySeconds) ?? 0;
   }
 
-  /// 공부 시간 저장
+  /// Saves accumulated study seconds.
   Future<void> saveStudySeconds(int seconds) async {
     await init();
     await _prefs?.setInt(_keyStudySeconds, seconds);
     await _prefs?.setInt(_keyLastUpdateTime, DateTime.now().millisecondsSinceEpoch);
   }
 
-  /// 세션 활성화 여부
+  /// Returns whether a study session is active.
   Future<bool> isSessionActive() async {
     await init();
     return _prefs?.getBool(_keySessionActive) ?? false;
   }
 
-  /// 세션 활성 상태 저장
+  /// Updates active session state.
   Future<void> setSessionActive(bool active) async {
     await init();
     await _prefs?.setBool(_keySessionActive, active);
@@ -48,7 +48,7 @@ class StudySessionService {
     }
   }
 
-  /// 마지막 업데이트 시각
+  /// Returns last update timestamp if present.
   Future<DateTime?> getLastUpdateTime() async {
     await init();
     final timestamp = _prefs?.getInt(_keyLastUpdateTime);
@@ -58,7 +58,7 @@ class StudySessionService {
     return null;
   }
 
-  /// 세션 초기화
+  /// Clears all persisted session data.
   Future<void> resetSession() async {
     await init();
     await _prefs?.setInt(_keyStudySeconds, 0);
